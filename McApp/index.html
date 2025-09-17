@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>McDonald Bestillingsstander</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="pill">Næste bestillingsnummer: <b id="orderNo">1</b></div>
+    <div class="pill">Dagens omsætning: <b id="revenue">0,00 kr</b></div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>Hovedret</h2>
+        <div id="main-list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Drikkelse</h2>
+        <div id="drink-list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Tilbehør</h2>
+        <div id="side-list"></div>
+      </section>
+
+      <section class="card cart">
+        <h2>Din bestilling</h2>
+        <ul id="cartList"><li class="empty">Ingen varer endnu</li></ul>
+        <div class="total"><span>Samlet:</span><b id="total">0,00 kr</b></div>
+        <div class="footer">
+          <button class="warn" id="checkoutBtn" disabled>Gennemfør køb</button>
+          <button class="danger" id="cancelBtn">Annullér</button>
+        </div>
+        <p class="hint">Tip: Brug +/- for at ændre antal eller fjern alt ved at annullere.</p>
+      </section>
+
+      <section class="card">
+        <h2>Desserter</h2>
+        <div id="dessert-list"></div>
+      </section>
+
+      <section class="card" style="grid-column: span 3;">
+        <h2>Sådan virker standeren</h2>
+        <ol>
+          <li>Vælg varer fra kategorierne.</li>
+          <li>Tryk <b>Gennemfør køb</b> for at se din bestillingsseddel.</li>
+          <li>Luk kvitteringen (X) for at betale og frigøre standeren.</li>
+          <li>Annullér når som helst for at starte forfra (samme nummer bevares).</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <!-- Receipt modal -->
+  <div class="modal" id="modal">
+    <div class="sheet">
+      <header style="display:flex;justify-content:space-between;align-items:center;">
+        <h3>Bestillingsseddel</h3>
+        <button class="x" id="closeModal">X</button>
+      </header>
+      <div id="receipt" class="receipt"></div>
+      <p class="hint">Når du lukker dette vindue, bogføres betalingen, omsætning opdateres, og næste nummer klargøres.</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

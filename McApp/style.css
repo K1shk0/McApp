@@ -1,0 +1,37 @@
+:root { --brand:#ffc300; --bg:#111; --panel:#1b1b1b; --muted:#888; --ok:#17a34a; --warn:#d97706; --danger:#ef4444; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#000;position:sticky;top:0;z-index:2}
+.pill{padding:8px 12px;border-radius:999px;background:var(--panel);font-weight:600}
+.pill b{color:var(--brand)}
+main{max-width:1100px;margin:24px auto;padding:0 16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border-radius:14px;padding:14px}
+.card h2{margin:4px 0 8px;font-size:18px}
+.item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #242424}
+.item:last-child{border-bottom:0}
+.name{font-weight:600}
+.price{color:var(--muted);font-size:14px}
+.row{display:flex;gap:8px;align-items:center}
+button{border:0;border-radius:10px;padding:8px 10px;font-weight:700;cursor:pointer}
+.add{background:var(--ok);color:#fff}
+.sub{background:#333;color:#fff}
+.danger{background:var(--danger);color:#fff}
+.warn{background:var(--warn);color:#fff}
+.footer{display:flex;gap:10px;margin-top:12px}
+/* Cart */
+.cart{position:sticky;top:64px}
+.cart ul{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}
+.cart li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed #2d2d2d}
+.empty{color:var(--muted);font-style:italic}
+.total{display:flex;justify-content:space-between;margin-top:10px;font-size:18px}
+/* Receipt modal */
+.modal{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;padding:16px}
+.modal .sheet{background:#fff;color:#111;max-width:560px;width:100%;border-radius:12px;padding:16px}
+.sheet header{background:#fff;color:#111;position:unset;padding:0;margin-bottom:8px}
+.sheet h3{margin:0}
+.x{background:#eee;color:#111;border-radius:8px;padding:6px 10px;cursor:pointer}
+.receipt{white-space:pre-wrap;background:#fafafa;border:1px solid #eee;border-radius:8px;padding:12px;max-height:45vh;overflow:auto}
+.hint{color:#666;font-size:13px;margin-top:6px}
