@@ -1,0 +1,96 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: black;
+  font-weight: bold;
+}
+header b {
+  color: #ffc300;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Menu and cart sections */
+.menu-section, .cart-section {
+  background: #1b1b1b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Menu takes more space, cart smaller */
+.menu-section {
+  flex: 3;
+}
+.cart-section {
+  flex: 1;
+}
+
+/* Menu items */
+#menu .item {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#menu button {
+  background: #17a34a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#menu button:hover {
+  opacity: 0.8;
+}
+
+/* Cart */
+#cartList {
+  list-style: none;
+  padding: 0;
+}
+#cartList li {
+  margin: 5px 0;
+}
+#total {
+  color: #ffc300;
+  font-weight: bold;
+}
+
+/* Cart buttons */
+.cart-section button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cart-section button:first-of-type {
+  background: #d97706; /* orange checkout */
+  color: white;
+}
+.cart-section button:last-of-type {
+  background: #ef4444; /* red cancel */
+  color: white;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>McDonald’s Bestillingsstander</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>Næste bestillingsnummer: <b id="orderNo">1</b></div>
+    <div>Dagens omsætning: <b id="revenue">0,00 kr</b></div>
+  </header>
+
+  <main class="layout">
+    <section class="menu-section">
+      <h2>Menu</h2>
+      <p>Vælg dine varer:</p>
+      <div id="menu"></div>
+    </section>
+
+    <aside class="cart-section">
+      <h2>Din bestilling</h2>
+      <ul id="cartList"><li>Ingen varer endnu</li></ul>
+      <p>Samlet: <span id="total">0,00 kr</span></p>
+      <button onclick="checkout()">Gennemfør køb</button>
+      <button onclick="cancelOrder()">Annuller</button>
+    </aside>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
